@@ -56,7 +56,7 @@ jobs:
 
     # Run test cases with X virtual framebuffer (Xvfb)
     - name: Run Playwright tests
-      run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' npx playwright test -g ${{ github.event.inputs.TAG_NAME }} --reporter=line,allure-playwright
+      run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' npx playwright test -g ${{ github.event.inputs.TAG_NAME }}
 
     # Load source code to get Allure results
     - name: Load test report history
