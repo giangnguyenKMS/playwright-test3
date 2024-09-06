@@ -56,7 +56,7 @@ jobs:
 
     # Run test cases with X virtual framebuffer (Xvfb)
     - name: Run Playwright tests
-      run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' npx playwright test -g ${{ github.event.inputs.TAG_NAME }}
+      run: xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 1920x1080x24' npx playwright test -g ${{ github.event.inputs.TAG_NAME }} --reporter=line,allure-playwright
 
     # Load source code to get Allure results
     - name: Load test report history
@@ -84,17 +84,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: allure-history
-  
-    - uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
-
-    - uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: allure-report
-        path: allure-report
-        retention-days: 30
+ 
