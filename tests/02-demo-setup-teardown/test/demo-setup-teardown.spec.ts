@@ -3,8 +3,6 @@ import { test, expect} from '@playwright/test';
 test('Test case 1: Add a product to cart', {
   tag: [
     '@demo_setup_teardown',
-    '@smoke',
-    '@regression',
   ]
 }, async({page}) => {
   const email = "demo.playwright@gmail.com";
