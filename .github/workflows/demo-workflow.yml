@@ -45,8 +45,14 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
+    - name: Install Allure package
+      run: npm i -D allure-playwright
+    
     # Setup Xvfb to run headless mode
     - run: sudo apt-get install xvfb
+    
+    # Install Allure package
+    - run: npm i -D allure-playwright
 
     # Run test cases with X virtual framebuffer (Xvfb)
     - name: Run Playwright tests
