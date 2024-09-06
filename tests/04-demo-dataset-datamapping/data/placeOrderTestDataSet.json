@@ -1,0 +1,21 @@
+[
+  {
+  "username" : "demo.playwright@gmail.com",
+  "password" : "Admin123",
+  "productName" : "ZARA COAT 3",
+  "countryCode" : "india",
+  "countryName" : "India",
+  "dashBoardPageUrl": "https://rahulshettyacademy.com/client",
+  "orderMessage": " Thankyou for the order. "
+  },
+  {
+  "username" : "demo.playwright@gmail.com",
+  "password" : "Admin123",
+  "productName" : "IPHONE 13 PRO",
+  "countryCode" : "india",
+  "countryName" : "India",
+  "dashBoardPageUrl": "https://rahulshettyacademy.com/client",
+  "orderMessage": " Thankyou for the order. "
+  }
+]
+  
