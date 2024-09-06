@@ -1,0 +1,2 @@
+Test case 2 gets all product names: 
+[ 'ZARA COAT 3', 'ADIDAS ORIGINAL', 'IPHONE 13 PRO' ]
