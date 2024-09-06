@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Sep 06 12:49:14 GMT 2024","Fri Sep 06 12:49:21 GMT 2024","7518","chromium","04-demo-dataset-datamapping/test/demo-dataset.spec.ts","","","","Test case: Demo data set with product ZARA COAT 3",""
+"passed","Fri Sep 06 12:49:30 GMT 2024","Fri Sep 06 12:49:30 GMT 2024","71","teardown","03-demo-pom-fixture/dependencies-teardown.ts","","","","Clean up",""
+"passed","Fri Sep 06 12:48:55 GMT 2024","Fri Sep 06 12:48:58 GMT 2024","3105","chromium","02-demo-setup-teardown/test/demo-setup-teardown.spec.ts","","","","Test case 2: Get all product names",""
+"passed","Fri Sep 06 12:49:06 GMT 2024","Fri Sep 06 12:49:14 GMT 2024","7913","chromium","03-demo-pom-fixture/test/demo-pom.spec.ts","","","","Test case: Demo POM",""
+"passed","Fri Sep 06 12:48:49 GMT 2024","Fri Sep 06 12:48:54 GMT 2024","5219","setup","03-demo-pom-fixture/dependencies-setup.ts","","","","Dependencies setup",""
+"passed","Fri Sep 06 12:48:58 GMT 2024","Fri Sep 06 12:49:06 GMT 2024","7666","chromium","03-demo-pom-fixture/test/demo-fixture.spec.ts","","","","Test case: Demo fixture",""
+"passed","Fri Sep 06 12:49:21 GMT 2024","Fri Sep 06 12:49:29 GMT 2024","7779","chromium","04-demo-dataset-datamapping/test/demo-dataset.spec.ts","","","","Test case: Demo data set with product IPHONE 13 PRO",""
