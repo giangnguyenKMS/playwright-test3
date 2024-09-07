@@ -1,33 +1,20 @@
-import { test } from '../fixture/my-fixture';
+//ApplyPOM_Fixtures_MultiDataSet
+import { test } from "../../03-demo-pom-fixture/fixture/my-fixture";
 
-const dataset = JSON.parse(JSON.stringify(require("../data/placeOrderTestDataSet.json")));
+const dataset = JSON.parse(JSON.stringify(require("../data/placeOrderTestDataSet.json")))
 
-for (const data of dataset) {
-  test(`Test case: Demo data set with product ${data.productName}`, {
-    tag: [
-      '@demo_data_set',
-      '@smoke',
-      '@regression',
-    ]
-  }, async({
-    dashBoardPage, 
-    cartPage, 
-  }) => {
-    const email = data.username;
-    const productName = data.productName;
-    const dashBoardPageUrl = data.dashBoardPageUrl;
-    const countryName = data.countryName;
-    const orderSuccessfullyMessage = data.orderMessage;
-    
-    await dashBoardPage.goToDashBoardPage(dashBoardPageUrl);
-    await dashBoardPage.searchProductAddCart(productName);
-    await dashBoardPage.navigateToCart();
-  
-    await cartPage.VerifyProductIsDisplayed(productName);
-    await cartPage.Checkout();
-    await cartPage.selectCountry(countryName);
-    await cartPage.verifyEmailDisplayCorrectly(email);
-    await cartPage.clickPlaceOrderButton();
-    await cartPage.verifyOrderSuccessfully(orderSuccessfullyMessage);
-  });
-}
+test.describe('@demo_data_set @smoke @regression', () => {
+  for (const data of dataset) {
+    test(`User login and order product ${data.productName}`, async ({
+      loginPage, 
+      dashBoardPage, 
+      cartPage, 
+    }) => {
+      await loginPage.goToLoginPage("https://rahulshettyacademy.com/client");
+      await dashBoardPage.searchProductAddCart(data.productName);
+      await dashBoardPage.navigateToCart();
+      await cartPage.VerifyProductIsDisplayed(data.productName);
+      await cartPage.Checkout();
+    });
+  }
+})
